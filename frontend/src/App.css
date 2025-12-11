@@ -1,0 +1,8 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(to top , #9becd4 ,rgb(231, 184, 123),rgb(224, 241, 125));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
