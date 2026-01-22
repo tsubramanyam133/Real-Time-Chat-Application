@@ -1,6 +1,8 @@
 .App {
-  min-height: 100vh;
-  background: linear-gradient(to top , #9becd4 ,rgb(231, 184, 123),rgb(224, 241, 125));
+  height: 100vh;
+  background:url("https://img.freepik.com/free-photo/two-monastera-leaves-black-background_23-2147835077.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,7 +2,9 @@
 .chat-input-container {
   display: flex;
   padding: 20px 25px;
-  background: rgb(206, 223, 228);
+  background:url('https://t3.ftcdn.net/jpg/02/02/17/98/360_F_202179808_o2YPAXShv0rdjQSso7mqOqSprYAvhKEM.jpg');
+  background-size: cover;
+  
   border-top: 2px solid #f0f0f0;
   gap: 12px;
   align-items: center;

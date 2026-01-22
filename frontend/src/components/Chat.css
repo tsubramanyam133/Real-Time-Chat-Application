@@ -1,4 +1,4 @@
-/* 🔄 UPDATED FILE - Remove online count styles */
+ /*🔄 UPDATED FILE - Remove online count styles */
 .chat-container {
   background: rgb(26, 239, 222);
   width: 100vw;
@@ -12,10 +12,11 @@
 }
 
 .chat-header {
-  background: linear-gradient(120deg,rgb(183, 240, 149),rgb(135, 191, 221),rgb(232, 119, 119));
+  background:url("https://marketplace.canva.com/EAFsxtB6cxM/2/0/1600w/canva-blue-night-sky-cute-whale-desktop-wallpaper-Z3o7FZeI-Ms.jpg");
   color: rgb(246, 117, 12);
   padding: 20px 25px;
-  display: flex;
+  background-size:cover;
+    display: flex;
   font-size:30px;
   font-family: sans-serif;
   justify-content: space-between;

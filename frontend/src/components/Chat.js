@@ -5,7 +5,10 @@ import MessageList from "./MessageList";
 import ChatInput from "./ChatInput";
 import "./Chat.css";
 
-const socket = io(process.env.REACT_APP_SOCKET_URL || "http://localhost:5000");
+const socket = io( "http://localhost:5000",{
+  transports: ["websocket"],
+  autoConnect: true,
+});
 
 function Chat() {
   const [messages, setMessages] = useState([]);
@@ -82,7 +85,7 @@ function Chat() {
           <div className="header-icon">💬</div>
           <div className="header-info">
             <h1>Let's Chat</h1>
-            {/* 🗑️ REMOVED - Online count display */}
+            
           </div>
         </div>
         <div className="status">
@@ -112,5 +115,5 @@ function Chat() {
     </div>
   );
 }
+  export default Chat;
 
-export default Chat;

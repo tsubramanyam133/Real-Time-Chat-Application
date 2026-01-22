@@ -5,26 +5,27 @@ const dotenv = require("dotenv");
 const http = require("http"); // ⭐ NEW - Import http
 const { Server } = require("socket.io"); // ⭐ NEW - Import Socket.io
 const { addMessage } = require("./controllers/messageControllers"); // ⭐ NEW
-//dotenv in our server.js file
+
 dotenv.config();
 
 const app = express();
-const serverData = http.createServer(app); //   Create HTTP server
-const io = new Server(serverData, {
-  //  NEW - Create Socket.io instance
+const server = http.createServer(app); // ⭐ NEW - Create HTTP server
+const io = new Server(server, {
+  // ⭐ NEW - Create Socket.io instance
   cors: {
     origin: "*",
     methods: ["GET", "POST"],
   },
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT =5000 ;
+const serverData = server; // UPDATED - Use the HTTP server
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public")); //  NEW - Serve static files from public folder
+app.use(express.static("public")); // ⭐ NEW - Serve static files from public folder
 
 // Routes
 app.use("/api/messages", require("./routes/messageRoutes"));
@@ -33,7 +34,7 @@ app.use("/api/messages", require("./routes/messageRoutes"));
 app.get("/", (req, res) => {
   res.json({
     message: "Chat API Server with Socket.io", // 🔄 UPDATED
-    version: "2.0.0", //  UPDATED
+    version: "2.0.0", // 🔄 UPDATED
     endpoints: {
       getMessages: "GET /api/messages",
       createMessage: "POST /api/messages",
@@ -43,7 +44,7 @@ app.get("/", (req, res) => {
   });
 });
 
-//  NEW - Socket.io connection handling
+// ⭐ NEW - Socket.io connection handling
 io.on("connection", (socket) => {
   console.log("✅ User connected:", socket.id);
 
@@ -108,9 +109,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-// UPDATED - Start server with Socket.io
-serverData.listen(PORT, () => {
+// 🔄 UPDATED - Start server with Socket.io
+server.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`🔌 Socket.io enabled`); 
+  console.log(`🔌 Socket.io enabled`); // ⭐ NEW
   console.log(`Environment: ${process.env.NODE_ENV}`);
 });

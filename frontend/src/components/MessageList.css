@@ -3,8 +3,9 @@
   flex: 1;
   padding: 25px;
   overflow-y: auto;
-  background: #d1d19b;
+  background:url('https://images.unsplash.com/photo-1491466424936-e304919aada7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww.jpg');
   display: flex;
+  background-size: cover;
   flex-direction: column;
 }
 
@@ -57,9 +58,9 @@
 
 /* ⭐ UPDATED - System messages (centered) */
 .message.system {
-  background: #e3e8ef;
-  color: #369af7;
-  font-size: 14px;
+  background: #f4f690;
+  color:#060700;
+  font-size: 16px;
   text-align: center;
   max-width: 85%;
   align-self: center;

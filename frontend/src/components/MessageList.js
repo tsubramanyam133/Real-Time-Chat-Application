@@ -1,5 +1,5 @@
 // 🔄 UPDATED FILE
-import React, { useEffect, useRef } from "react";
+ import React, { useEffect, useRef } from "react";
 import "./MessageList.css";
 
 function MessageList({ messages, currentUser }) {
@@ -62,3 +62,4 @@ function MessageList({ messages, currentUser }) {
 }
 
 export default MessageList;
+
